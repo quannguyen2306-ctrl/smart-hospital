@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/493ca20110.js" crossorigin="anonymous"></script>
     <title>{%block title%}Prescription{%endblock%}</title>
     <link rel="icon" type="image/x-icon"
-        href="https://www.freeiconspng.com/thumbs/hospital-icon/ambulance-cross-hospital-icon-11.png">
+        href="https://toppng.com/uploads/preview/health-plan-icon-hospital-icon-blue-11553476430fckf2owtwt.png">
        
 </head>
 
@@ -18,7 +18,7 @@
         <li class="nav-item user">
             <a class="nav-link" href="#">
                 <i class="fa-solid fa-user-doctor icon"></i>
-                USER
+                DOCTOR
             </a>
         </li>
         <li class="nav-item {% block dashboard_active%}{%endblock%}">
@@ -47,7 +47,7 @@
         </li>
         <li class="nav-item logout">
             <a href="#" class="nav-link">
-                <i class="fa-solid fa-right-from-bracket"></i>
+                <i class="fa-solid fa-right-from-bracket icon"></i>
                 Log Out
             </a>
         </li>
@@ -75,10 +75,11 @@
         }
 
         .vl {
-            border-left: 1.5px solid black;
+            border-left: 1px solid black;
             height: 600px;
             margin-left: 40px;
-            margin-top: 20px;
+            margin-top: 30px;
+            color: #222d4f;
         }
 
         #navbar {
@@ -87,8 +88,9 @@
             padding: 0;
             width: 180px;
             height: 100vh;
-            background-color: #015D67;
+            background-color: #222d4f;
             font-size: 1.3rem;
+            
         }
 
         li a {
@@ -101,12 +103,20 @@
         }
 
         /* color change on hover */
-        .active a,
+      
         .nav-item a:hover {
-
-            background-color: #fff;
-            color: #015D67;
-
+            background-color: #171f37;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .active a{
+            background-color: #73a7ba;
+            color: #fff;
+           
+        }
+        .active a:hover {
+            background-color: #6b9eb0;
+            color: #fff;
         }
 
         /* .nav-item {
@@ -118,7 +128,9 @@
         }
 
         .icon {
-            margin-right: 10px;
+            margin-right: 20px;
+            width: 10px;
+            height: auto;
         }
 
         .user {
@@ -127,13 +139,14 @@
 
         .logout {
             margin-top: 260%;
-            position: absolute;
+            width: 180px;
         }
-
+    
         .container {
-            background-color: #EAFAFF;
+            background-color: #fff;
             flex: 1 1 auto;
             margin-left: 180px;
+            color: #222d4f;
             height: 100vh;
         }
 
@@ -158,6 +171,7 @@
             font-size: 2.5rem;
             padding-top: 20px;
             padding-left: 40px;
+            color: #222d4f;
         }
 
         #sub-menu {
@@ -169,21 +183,31 @@
 
         .sub {
             text-decoration: none;
-            color: black;
+            color: #73a7ba;
             margin-bottom: 20px;
-
+            font-weight: 700;
+            padding-left: 5px;
         }
 
-        .active2,
+        .active2{
+            color: black;
+            width: 100px;
+            font-weight: 700;
+            border-left: 2px black solid;
+        }
+
         #sub-menu a:hover {
             text-decoration: underline;
-            color: blue;
+            width: 100px;
+            font-weight: 700;
         }
 
         .content {
             display: flex;
         }
-
+        #content-item {
+            margin-top: 10px;
+        }
         
     </style>
     <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}">

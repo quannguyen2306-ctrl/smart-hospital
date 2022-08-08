@@ -1,8 +1,11 @@
 import email
+from ipaddress import ip_address
 from sqlalchemy import ForeignKey
 from . import db 
 from datetime import datetime
 from flask_login import UserMixin
+
+
 
 class Prescripion(db.Model):
     __tablename__ = 'prescription_record'
@@ -44,11 +47,23 @@ class Medicine(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(200), nullable = False)
     description = db.Column(db.Text(), nullable = False)
-    stored = db.Column(db.Integer, nullable = False)
-    pre_id = db.Column(db.Integer, ForeignKey("prescription_record.id"))
+    stored_number = db.Column(db.Integer, nullable = False)
     def __repr__(self):
         return f"Medicine name: {self.name}"
 
-    
+class Robot(db.Model):
+    __tablename__ = "robot_hospital"
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String(200), nullable=True)
+    ip_address = db.Column(db.String(200), nullable = False)
+    mac_address = db.Column(db.String(200), nullable = False)
+    def __repr__(self):
+        robot_name = self.name
+        if self.name == "":
+            robot_name = "Unknown robot"
+        return f"{robot_name}:\n{self.ip_address}\n{self.mac_address}"
+
+
+
 
 

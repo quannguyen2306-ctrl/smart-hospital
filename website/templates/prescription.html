@@ -4,11 +4,12 @@
 <div class="content">
     <div id="sub-menu">
         <a href="/pre" class="sub active2">Prescription</a>
-        <a href="/history" class="sub">View history</a>
+        <a href="/pre/processing" class="sub">Processing</a>
+
+        <a href="/pre/history" class="sub">View history</a>
     </div>
-    <div class="vl"></div>
-    <div>
-      <h1 style="margin-left: 50px;margin-top: 20px;">Creating prescription</h1>
+    <div id="content-item">
+      <h1 style="margin-left: 50px;margin-top: 20px; color: #222d4f;">Creating prescription</h1>
       <form class="create" autocomplete="off"  method="POST" style="display: flex; margin-left: 50px;">
         <div id="firstSection">
             <label for="name">Doctor's name:</label>
@@ -17,7 +18,7 @@
             <select name="room" id="room" required>
                 <option value="" disabled selected>Select room:</option>
                 <option value="1">Room number 1</option>
-                <option value="2">Room number 2</option>
+                <option value="2">Room number 2</option>  
                 <option value="3">Room number 3</option>
             </select>
             <label for="patient">Select patient number: </label>
@@ -94,8 +95,21 @@
     padding: 8px;
   }
   
+
   tr:nth-child(even) {
     background-color: #dddddd;
+  
+  }
+
+  #deleteAll { 
+    background-color: #222d4f;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  #deleteAll:hover { 
+    background-color: #526293;
   }
   #secondSection {
     position: relative;
@@ -125,6 +139,7 @@
       border: black 1px solid;
       list-style-type: disc;
       width: 350px;
+      color: #222d4f;
     }
     #medicine {
         width: 500px;
@@ -138,20 +153,20 @@
       border-radius: 0px;
       border: none;
       padding: 9px;
-      background-color: #015D67;
+      background-color: #222d4f;
       color: white;
       font-weight: 700;
     }
 
     #searchBtn:hover {
-      background-color: #004047;
+      background-color: #526293;
     }
     .create {
         gap: 50px;
         padding: 50px;
         margin-top: 30px;
         background-color: #fff;
-        border-radius: 15px;
+        border-radius: 8px;
         font-size: 1.3rem;
         height: 300px;
         width: auto;
@@ -167,9 +182,9 @@
     }
 
     #render {
-      border-radius: 30px;
+      border-radius: 20px;
       border: none;
-      background-color: #015D67;
+      background-color: #222d4f;
       color: white;
       font-weight: 700;
       padding: 20px;
@@ -186,7 +201,7 @@
         align-items:center;
         margin-top: 10px;
         display: flex;
-
+        
         
     }
     .amount {
@@ -212,13 +227,13 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        background-color: #015D67;
+        background-color: #222d4f;
         color: white;
         border: none;
 
       }
       .selected-item-name {
-        color: #015D67;
+        color: #222d4f;
         width: 150px;
       }
 
@@ -260,7 +275,7 @@
           margin: 0;
       }
     
-    .autocomplete {
+    .autocomplete { 
       /*the container must be positioned relative:*/
       position: relative;
       display: inline-block;

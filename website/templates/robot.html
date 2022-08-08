@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title%}Home{%endblock%}
+{%block heading%}DASHBOARD{%endblock%}
+{%block dashboard_active%}active{%endblock%}
+{%block content%}
+<div class="content">
+    <div id="sub-menu">
+        <a href="/" class="sub">CONTROL</a>
+        <a href="/robot" class="sub active2">Robot status</a>
+    </div>
+    <div id="content-item">
+        <h1 style="margin-left: 50px; margin-top: 20px;">Robot status</h1>
+        <div id="scan">
+            <button type="button" id="device-scanner">
+                <span id="device-scanner-text">Scan</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    #scan {
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    #device-scanner {
+        border: none;
+        padding: 10px;
+        background-color: rgb(227, 226, 226);
+        width: 100px;
+        font-size: 1.1em;
+        position: relative;
+    }
+
+    #device-scanner:active {
+        background-color: rgb(200, 200, 200);
+    }
+</style>
+
+
+{%endblock%}

@@ -4,14 +4,16 @@
 <div class="content">
     <div id="sub-menu">
         <a href="/pre" class="sub">Prescription</a>
-        <a href="/history" class="sub active2">View history</a>
+        <a href="/pre/processing" class="sub">Processing</a>
+        <a href="/pre/history" class="sub active2">View history</a>
+        
+
     </div>
-    <div class="vl"></div>
-    <div>
+    <div id="content-item">
         <h1 style="margin-left: 50px; margin-top: 20px;">History of created prescription</h1>
         <div>
             <table id="pre_history">
-                <tr>
+                <tr> 
                     <th>No.</th>
                     <th>Date</th>
                     <th>Author</th>
@@ -58,6 +60,7 @@
         width: 1000px;
         margin-left: 50px;
         margin-top: 20px;
+        margin-bottom: 100px;
     }
 
     td,
@@ -68,9 +71,8 @@
     }
 
 
-
     tr:nth-child(even) {
-        background-color: #dddddd;
+        background-color: #cfeaf4;
     }
 </style>
 <script type="text/javascript" src="{{ url_for('static', filename='history.js') }}"></script>
